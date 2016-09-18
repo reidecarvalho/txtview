@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.util.converter.*?>
+<?import br.edu.unirn.txtview.view.NumberTextFieldCellFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.unirn.txtview.controller.layout.LayoutController"
+	fx:id="root" hgap="5" vgap="5">
+	
+	<stylesheets>
+		<String fx:value="css/Base.css" />
+	</stylesheets>
+
+	<padding>
+		<Insets top="5" right="5" bottom="5" left="5" />
+	</padding>
+
+	<Label text="Nome do Leiaute:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+	<TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+	<TableView fx:id="tblField" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2" editable="true"
+		GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" prefWidth="575">
+
+		<columns>
+			<TableColumn text="Linha" prefWidth="50" editable="false" resizable="false" sortable="false">
+				<cellValueFactory>
+					<PropertyValueFactory property="lineNumber" />
+				</cellValueFactory>
+			</TableColumn>
+			<TableColumn text="Nome da Coluna" prefWidth="275" editable="true" resizable="false" sortable="false">
+				<cellValueFactory>
+					<PropertyValueFactory property="name" />
+				</cellValueFactory>
+				<cellFactory>
+					<TextFieldTableCell fx:factory="forTableColumn" />
+				</cellFactory>
+			</TableColumn>
+			<TableColumn text="Tamanho" prefWidth="75" editable="true" resizable="false" sortable="false" styleClass="numberField" 
+			onEditCommit="#onEditCommitSize">
+				<cellValueFactory>
+					<PropertyValueFactory property="size" />
+				</cellValueFactory>
+				<cellFactory>
+					<NumberTextFieldCellFactory fx:factory="forTableColumn" />
+				</cellFactory>
+			</TableColumn>
+			<TableColumn text="Início" prefWidth="75" editable="false" resizable="false" sortable="false" styleClass="numberField">
+				<cellValueFactory>
+					<PropertyValueFactory property="start" />
+				</cellValueFactory>
+			</TableColumn>
+			<TableColumn text="Fim" prefWidth="75" editable="false" resizable="false" sortable="false" styleClass="numberField">
+				<cellValueFactory>
+					<PropertyValueFactory property="end" />
+				</cellValueFactory>
+			</TableColumn>
+		</columns>
+	</TableView>
+	
+	<BorderPane GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2">
+		<left>
+			<HBox spacing="5">
+				<Button text="Add" onAction="#btnAddLine"/>
+				<Button text="Del" onAction="#btnDelLine"/>
+			</HBox>
+		</left>
+		<right>
+			<HBox spacing="5">
+				<Button text="Salvar" onAction="#btnSave"/>
+				<Button text="Cancelar" onAction="#btnCancel"/>
+			</HBox>
+		</right>
+	</BorderPane>
+	
+</GridPane>

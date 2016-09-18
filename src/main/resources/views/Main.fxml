@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.Tooltip?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root" fx:controller="br.edu.unirn.txtview.controller.main.MainController"
+	spacing="5">
+	
+	<stylesheets>
+		<String fx:value="css/Base.css" />
+		<String fx:value="css/Main.css" />
+	</stylesheets>
+	
+	<padding>
+		<Insets top="5" right="5" bottom="5" left="5" />
+	</padding>
+
+	<FlowPane hgap="5">
+		<Button onAction="#btnOpenFile" styleClass="openFileButton">
+			<tooltip>
+				<Tooltip text="Clique para abrir o arquivo" />
+			</tooltip>
+		</Button>
+		
+		<ComboBox fx:id="cmbCharset">
+			<items>
+	        <FXCollections fx:factory="observableArrayList">
+	          <String fx:value="ISO-8859-1" />
+	          <String fx:value="UTF-8" />
+	        </FXCollections>
+	      </items>
+	      <value>
+	        <String fx:value="ISO-8859-1" /> <!-- valor default -->
+	    </value>
+		</ComboBox>
+
+		<TextField fx:id="txtFile" editable="false" prefWidth="300"/>
+
+		<ComboBox fx:id="cmbLayout" />
+
+		<Button onAction="#btnAddLayout" styleClass="addIconButton">
+			<tooltip>
+				<Tooltip text="Clique para adicionar um novo Leiaute" />
+			</tooltip>
+		</Button>
+
+		<Button onAction="#btnEditLayout" styleClass="editIconButton">
+			<tooltip>
+				<Tooltip text="Clique para alterar um Leiaute" />
+			</tooltip>
+		</Button>
+		
+		<Button onAction="#btnDelLayout" styleClass="deleteIconButton">
+			<tooltip>
+				<Tooltip text="Clique para excluir um Leiaute" />
+			</tooltip>
+		</Button>
+
+		<Button text="Aplicar leiaute" onAction="#btnApplyLayout" />
+	</FlowPane>
+
+	<TableView fx:id="tblFile" editable="true" VBox.vgrow="ALWAYS"/>
+</VBox>
