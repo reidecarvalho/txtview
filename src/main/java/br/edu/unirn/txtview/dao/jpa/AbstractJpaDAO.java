@@ -9,8 +9,8 @@ import br.edu.unirn.txtview.dao.DAO;
 import net.jodah.typetools.TypeResolver;
 
 /**
- * Fornece implementação padrão em JPA para a interface {@link DAO}.<br/>
- * Subclasses tem acesso ao {@link EntityManager} via {@link AbstractJpaDAO#getEM()} e podem adicionar suas próprias consultas. 
+ * Fornece implementaÃ§Ã£o padrÃ£o em JPA para a interface {@link DAO}.<br/>
+ * Subclasses tem acesso ao {@link EntityManager} via {@link AbstractJpaDAO#getEM()} e podem adicionar suas prÃ³prias consultas. 
  * @author reinaldo
  *
  * @param <T> Tipo da entidade alvo das consultas.
@@ -24,13 +24,13 @@ public abstract class AbstractJpaDAO<T> implements DAO<T> {
 	
 	@SuppressWarnings("unchecked")
 	public AbstractJpaDAO() {
-		// obtém "T.class" em runtime
+		// obtÃ©m "T.class" em runtime
 		Class<?>[] args = TypeResolver.resolveRawArguments(AbstractJpaDAO.class, getClass());
 		entityClass = (Class<T>) args[0];
 	}
 	
 	/**
-	 * Acesso ao {@link EntityManager} para a realização de operações no banco de dados.
+	 * Acesso ao {@link EntityManager} para a realizaÃ§Ã£o de operaÃ§Ãµes no banco de dados.
 	 * @return o {@link EntityManager}.
 	 */
 	protected final EntityManager getEM() {

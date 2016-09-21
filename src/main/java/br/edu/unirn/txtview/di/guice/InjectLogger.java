@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Anotação para injetar logs.
+ * AnotaÃ§Ã£o para injetar logs.
  * 
  * @author Reinaldo
  */

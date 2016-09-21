@@ -3,13 +3,13 @@ package br.edu.unirn.txtview.exception;
 import br.edu.unirn.txtview.model.Layout;
 
 /**
- * Sinaliza que o tamanho da linha é diferente do somatório do tamanho dos campos de um {@link Layout}.
+ * Sinaliza que o tamanho da linha Ã© diferente do somatÃ³rio do tamanho dos campos de um {@link Layout}.
  * @see Layout#getFieldsSize()
  * @author Reinaldo
  *
  */
 public class InvalidLineSizeException extends Exception {
 	public InvalidLineSizeException(int lineSize, int expected) {
-		super("tamanho de linha inválido; foi " + lineSize + ", esperava " + expected);
+		super("tamanho de linha invï¿½lido; foi " + lineSize + ", esperava " + expected);
 	}
 }

@@ -12,10 +12,10 @@ public class LayoutServiceImpl extends AbstractServiceImpl<Layout> implements La
 	@Override
 	protected void validate(Layout l) throws DadoInvalidoException {
 		if (l == null) {
-			throw new DadoInvalidoException("Layout n„o informado");
+			throw new DadoInvalidoException("Layout n√£o informado");
 		}
 		if (StringUtils.isBlank(l.getName())) {
-			throw new DadoInvalidoException("Nome do leiaute n„o informado");
+			throw new DadoInvalidoException("Nome do leiaute n√£o informado");
 		}
 		if (l.getFields().isEmpty()) {
 			throw new DadoInvalidoException("Nenhuma coluna foi informada");

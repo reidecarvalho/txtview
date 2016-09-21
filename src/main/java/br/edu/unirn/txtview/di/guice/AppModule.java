@@ -12,7 +12,7 @@ import br.edu.unirn.txtview.service.core.Service;
 import br.edu.unirn.txtview.service.impl.LayoutServiceImpl;
 
 /**
- * Módulo para configuração no Guice das injeções de dependência.
+ * MÃ³dulo para configuraÃ§Ã£o no Guice das injeÃ§Ãµes de dependÃªncia.
  * @author reinaldo
  *
  */

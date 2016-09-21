@@ -10,12 +10,12 @@ import com.google.inject.persist.Transactional;
 import br.edu.unirn.txtview.dao.DAO;
 
 /**
- * Fornece implementação padrão dos serviços referentes à interface {@link Service}.<br/>
- * Subclasses tem acesso ao {@link DAO} via {@link AbstractServiceImpl#getDAO()} e podem adicionar suas próprias operações.<br/>
- * Utilize a anotação {@link Transaction} sobre um novo serviço (método) para demarcá-lo numa transação. 
+ * Fornece implementaÃ§Ã£o padrÃ£o dos serviÃ§os referentes Ã  interface {@link Service}.<br/>
+ * Subclasses tem acesso ao {@link DAO} via {@link AbstractServiceImpl#getDAO()} e podem adicionar suas prÃ³prias operaÃ§Ãµes.<br/>
+ * Utilize a anotaÃ§Ã£o {@link Transaction} sobre um novo serviÃ§o (mÃ©todo) para demarcÃ¡-lo numa transaÃ§Ã£o. 
  * @author reinaldo
  *
- * @param <T> Tipo da entidade alvo das operações.
+ * @param <T> Tipo da entidade alvo das operaÃ§Ãµes.
  */
 public abstract class AbstractServiceImpl<T> implements Service<T> {
 	
@@ -23,7 +23,7 @@ public abstract class AbstractServiceImpl<T> implements Service<T> {
 	private DAO<T> dao;
 	
 	/**
-	 * Acesso ao {@link DAO} para operações na base de dados. 
+	 * Acesso ao {@link DAO} para operaÃ§Ãµes na base de dados. 
 	 * @return o {@link DAO};
 	 */
 	protected final DAO<T> getDAO() {
@@ -63,9 +63,9 @@ public abstract class AbstractServiceImpl<T> implements Service<T> {
 	}
 	
 	/**
-	 * Subclasses podem sobrescrever esse método para implementar validações pré insert/update.
+	 * Subclasses podem sobrescrever esse mÃ©todo para implementar validaÃ§Ãµes prÃ© insert/update.
 	 * @param entity a ser validada.
-	 * @throws DadoInvalidoException caso alguma regra de negócio seja violada.
+	 * @throws DadoInvalidoException caso alguma regra de negÃ³cio seja violada.
 	 */
 	protected void validate(T entity) throws DadoInvalidoException {}
 }

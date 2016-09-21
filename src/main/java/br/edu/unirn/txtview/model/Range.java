@@ -11,10 +11,10 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class Range {
 	
-	@Column(name = "start_index", nullable = false) // "start" é palavra reservada no PostgreSQL.
+	@Column(name = "start_index", nullable = false) // "start" Ã© palavra reservada no PostgreSQL.
 	private int start;
 	
-	@Column(name = "end_index", nullable = false) // "end" é palavra reservada no PostgreSQL.
+	@Column(name = "end_index", nullable = false) // "end" Ã© palavra reservada no PostgreSQL.
 	private int end;
 	
 	public Range() {}

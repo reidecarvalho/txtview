@@ -50,7 +50,7 @@ public class MainController extends AbstractController {
 				tableFileController.applyLayoutOnFile(layout, file, cmbCharset.getValue());
 			}
 			catch (IOException e) {
-				Alerts.error("N„o foi possÌvel ler o arquivo: " + e.getMessage());
+				Alerts.error("N√£o foi poss√≠vel ler o arquivo: " + e.getMessage());
 				e.printStackTrace();
 			}
 		}
@@ -87,7 +87,7 @@ public class MainController extends AbstractController {
 	private void btnDelLayout() throws IOException, ExcluirException {
 		Layout layout = cmbLayout.getValue();
 		if (layout != null) {
-			String msg = "Confirma exclus„o do Leiaute '" + layout.getName() + "'?";
+			String msg = "Confirma exclus√£o do Leiaute '" + layout.getName() + "'?";
 			if (Alerts.confirm(msg)) {
 				layoutService.delete(layout);
 				cmbLayout.getItems().remove(layout);

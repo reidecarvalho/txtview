@@ -7,7 +7,7 @@ import com.google.inject.persist.jpa.JpaPersistModule;
 import br.edu.unirn.txtview.di.guice.AppModule;
 
 /**
- * Classe para obter uma inst‚ncia de uma classe de forma manual, quando necess·rio.
+ * Classe para obter uma inst√¢ncia de uma classe de forma manual, quando necess√°rio.
  * @author Reinaldo
  *
  */
@@ -17,9 +17,9 @@ public class AppInjector {
 	private AppInjector() {}
 	
 	/**
-	 * ObtÈm uma inst‚ncia de uma determinado tipo.
+	 * Obt√©m uma inst√¢ncia de uma determinado tipo.
 	 * @param type tipo a ser instanciado.
-	 * @return a inst‚ncia do tipo.
+	 * @return a inst√¢ncia do tipo.
 	 */
 	public static <T> T getInstance(Class<T> type) {
 		return INJECTOR.getInstance(type);

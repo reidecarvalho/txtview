@@ -1,7 +1,7 @@
 package br.edu.unirn.txtview.service.core;
 
 /**
- * Exceção que representa um erro ou violação ao tentar excluir uam entidade na base de dados.
+ * ExceÃ§Ã£o que representa um erro ou violaÃ§Ã£o ao tentar excluir uam entidade na base de dados.
  * @author reinaldo
  *
  */

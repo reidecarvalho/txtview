@@ -7,7 +7,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 
 /**
- * Exibe mensagens informativas ao usu·rio.
+ * Exibe mensagens informativas ao usu√°rio.
  * @author Reinaldo
  *
  */

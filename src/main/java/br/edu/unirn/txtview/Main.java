@@ -10,7 +10,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
- * Ponto de início da aplicação.
+ * Ponto de inÃ­cio da aplicaÃ§Ã£o.
  * @author Reinaldo
  *
  */
@@ -23,7 +23,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		
-		// inicia o serviço de persistência
+		// inicia o serviÃ§o de persistÃªncia
 		AppInjector.getInstance(PersistService.class).start();
 		
 		try {
@@ -41,7 +41,7 @@ public class Main extends Application {
 	@Override
 	public void stop() throws Exception {
 		
-		// para o serviço de persistência quando a aplicação encerrar
+		// para o serviÃ§o de persistÃªncia quando a aplicaÃ§Ã£o encerrar
 		AppInjector.getInstance(PersistService.class).stop();
 	}
 }

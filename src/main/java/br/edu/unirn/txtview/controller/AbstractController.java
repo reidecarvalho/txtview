@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 /**
- * ImplementaÁ„o base para Controllers FXML, fornecendo serviÁos auxiliares.
+ * Implementa√ß√£o base para Controllers FXML, fornecendo servi√ßos auxiliares.
  * @author Reinaldo
  *
  */
@@ -22,10 +22,10 @@ public abstract class AbstractController implements ParamController {
 
 	/**
 	 * Permite que sublclasses mostre outra tela, modal.
-	 * @param title tÌtulo da tela.
+	 * @param title t√≠tulo da tela.
 	 * @param fxml nome do aquivo fxml.
-	 * @param params lista de par‚metros a serem passados para o controller.
-	 * @throws IOException se o arquivo fxml n„o puder ser carregado.
+	 * @param params lista de par√¢metros a serem passados para o controller.
+	 * @throws IOException se o arquivo fxml n√£o puder ser carregado.
 	 */
 	protected <C> void showView(String title, String fxml, Object... params) throws IOException {
 		Stage stage = new Stage(StageStyle.UTILITY);
@@ -45,8 +45,8 @@ public abstract class AbstractController implements ParamController {
 	}
 
 	/**
-	 * Exibe um FileChooser para a seleÁ„o de um arquivo pelo usu·rio.
-	 * @return um {@link File} se o usu·rio escolheu um arquivo, ou <code>null</code> se n„o.
+	 * Exibe um FileChooser para a sele√ß√£o de um arquivo pelo usu√°rio.
+	 * @return um {@link File} se o usu√°rio escolheu um arquivo, ou <code>null</code> se n√£o.
 	 */
 	protected File newFileChooser() {
 		FileChooser fc = new FileChooser();
@@ -62,7 +62,7 @@ public abstract class AbstractController implements ParamController {
 	}
 
 	/**
-	 * Subclasses podem sobrescrever esse mÈtodo para receber par‚metros informados. 
+	 * Subclasses podem sobrescrever esse m√©todo para receber par√¢metros informados. 
 	 */
 	@Override
 	public void setParams(Object... params) {}

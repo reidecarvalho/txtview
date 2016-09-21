@@ -5,11 +5,11 @@ import java.util.List;
 import br.edu.unirn.txtview.dao.DAO;
 
 /**
- * Encapsula todas as operaÁıes que correlacionam-se ao acesso de dados padr„o via {@link DAO}.<br/>
- * … somente nos serviÁos que as transaÁıes s„o demarcadas.
+ * Encapsula todas as opera√ß√µes que correlacionam-se ao acesso de dados padr√£o via {@link DAO}.<br/>
+ * √â somente nos servi√ßos que as transa√ß√µes s√£o demarcadas.
  * @author reinaldo
  *
- * @param <T> Tipo da entidade alvo das operaÁıes.
+ * @param <T> Tipo da entidade alvo das opera√ß√µes.
  */
 public interface Service<T> {
 	
@@ -29,21 +29,21 @@ public interface Service<T> {
 	
 	/**
 	 * Exclui a entidade da base de dados.
-	 * @param entity entidade a ser excluÌda.
-	 * @throws ExcluirException caso a entidade n„o possa ser excluÌda.
+	 * @param entity entidade a ser exclu√≠da.
+	 * @throws ExcluirException caso a entidade n√£o possa ser exclu√≠da.
 	 */
 	void delete(T entity) throws ExcluirException;
 	
 	/**
-	 * Consulta a entidade pela chave prim·ria.
-	 * @param pk chave prim·ria.
-	 * @return A entidade que possui a chave prim·ria informada, ou <code>null</code> caso n„o exista.
+	 * Consulta a entidade pela chave prim√°ria.
+	 * @param pk chave prim√°ria.
+	 * @return A entidade que possui a chave prim√°ria informada, ou <code>null</code> caso n√£o exista.
 	 */
 	T find(Object pk);
 	
 	/**
 	 * Consulta todas as entidades.
-	 * @return Todas as entidades, ou uma lista vazia caso n„o exista.
+	 * @return Todas as entidades, ou uma lista vazia caso n√£o exista.
 	 */
 	List<T> findAll();
 }

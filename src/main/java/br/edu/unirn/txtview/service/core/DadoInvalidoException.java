@@ -1,7 +1,7 @@
 package br.edu.unirn.txtview.service.core;
 
 /**
- * Exceção que representa um erro de violação de regras sobre os dados da entidade a ser inserida ou atualizada.
+ * ExceÃ§Ã£o que representa um erro de violaÃ§Ã£o de regras sobre os dados da entidade a ser inserida ou atualizada.
  * @author reinaldo
  *
  */

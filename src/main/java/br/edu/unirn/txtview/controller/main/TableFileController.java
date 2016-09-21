@@ -41,7 +41,7 @@ public class TableFileController {
 	
 	/**
 	 * Carrega o arquivo na tabela, aplicando o leiaute para realizar o parse. 
-	 * @param layout leiaute a ser aplicado ‡s linhas do arquivo.
+	 * @param layout leiaute a ser aplicado √†s linhas do arquivo.
 	 * @param file arquivo a ser carregado.
 	 * @param charset encoding utilizado para carregar o arquivo.
 	 * @throws IOException caso haja algum erro ao carregar o arquivo.
@@ -119,7 +119,7 @@ public class TableFileController {
 			addLine(layout, index, errorLine);
 		}
 		catch (InvalidLineSizeException e) {
-			// n„o ocorrer· porque a linha È criada no tamanho dos campos do layout
+			// n√£o ocorrer√° porque a linha √© criada no tamanho dos campos do layout
 			throw new IllegalStateException(e);
 		}
 	}

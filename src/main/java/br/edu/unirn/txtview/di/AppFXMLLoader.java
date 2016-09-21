@@ -17,14 +17,14 @@ public class AppFXMLLoader {
 
 	/**
 	 * Carrega o FXML.
-	 * @param fxml Nome do arquivo fxml (utilizar apenas o nome do arquivo; o path será resolvido).
-	 * @param params Parâmetros para o Controller, via {@link ParamController#setParams(Object...)}.
+	 * @param fxml Nome do arquivo fxml (utilizar apenas o nome do arquivo; o path serÃ¡ resolvido).
+	 * @param params ParÃ¢metros para o Controller, via {@link ParamController#setParams(Object...)}.
 	 * @return O root node na hierarquia do fxml.
 	 */
 	public static Parent load(String fxml, Object... params) {
 		FXMLLoader loader = new FXMLLoader();
 		
-		// configura o controller de injeção
+		// configura o controller de injeÃ§Ã£o
 		loader.setControllerFactory(type -> AppInjector.getInstance(type));
 		
 		try(InputStream in = AppFXMLLoader.class.getResourceAsStream(VIEWS_PATH + fxml)) {

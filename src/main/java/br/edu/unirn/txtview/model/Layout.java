@@ -65,8 +65,8 @@ public class Layout {
 	}
 	
 	/**
-	 * Retorna o somatório dos tamanhos dos campos. É o tamanho total que uma linha deve ter.
-	 * @return O somatório do tamanho dos campos.
+	 * Retorna o somatÃ³rio dos tamanhos dos campos. Ã‰ o tamanho total que uma linha deve ter.
+	 * @return O somatÃ³rio do tamanho dos campos.
 	 */
 	public int getFieldsSize() {
 		return fields.stream().mapToInt(Field::getSize).sum();

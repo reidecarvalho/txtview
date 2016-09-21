@@ -9,7 +9,7 @@ import javafx.util.Callback;
 import javafx.util.converter.NumberStringConverter;
 
 /**
- * CellFactory para criar um TableCell que só aceite números, através do conversor {@link NumberStringConverter}.<br/>
+ * CellFactory para criar um TableCell que sÃ³ aceite nÃºmeros, atravÃ©s do conversor {@link NumberStringConverter}.<br/>
  * Pode ser utilizado diretamente no arquivo FXML.
  * @author Reinaldo
  *

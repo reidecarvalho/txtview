@@ -9,16 +9,16 @@ import br.edu.unirn.txtview.model.Layout;
 
 /**
  * Converte uma linha para um mapa de campos, aplicando um {@link Layout} para realizar o parse.<br/>
- * O nome do campo È a chave. 
+ * O nome do campo √© a chave. 
  * @author Reinaldo
  *
  */
 public class LineToMapConverter {
 	
 	/**
-	 * Aplica a convers„o de uma linha para um mapa.
+	 * Aplica a convers√£o de uma linha para um mapa.
 	 * @param line linha a ser realizado o parse.
-	 * @param layout leiaute a ser aplicado na an·lise da linha.
+	 * @param layout leiaute a ser aplicado na an√°lise da linha.
 	 * @return Um mapa de campos do leiaute, com os valores correspondentes na linha.
 	 * @throws InvalidLineSizeException se o tamanho da linha for diferente do tamanho dos campos no leiaute.
 	 */

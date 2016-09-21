@@ -3,7 +3,7 @@ package br.edu.unirn.txtview.dao;
 import java.util.List;
 
 /**
- * Encapsula todas as operaÁıes comuns de acesso a dados ‡s entidades. 
+ * Encapsula todas as opera√ß√µes comuns de acesso a dados √†s entidades. 
  * @author reinaldo
  *
  * @param <T> Tipo da entidade alvo das consultas.
@@ -24,20 +24,20 @@ public interface DAO<T> {
 	
 	/**
 	 * Exclui a entidade da base de dados.
-	 * @param entity entidade a ser excluÌda.
+	 * @param entity entidade a ser exclu√≠da.
 	 */
 	void delete(T entity);
 	
 	/**
-	 * Consulta a entidade pela chave prim·ria.
-	 * @param pk chave prim·ria.
-	 * @return A entidade que possui a chave prim·ria informada, ou <code>null</code> caso n„o exista.
+	 * Consulta a entidade pela chave prim√°ria.
+	 * @param pk chave prim√°ria.
+	 * @return A entidade que possui a chave prim√°ria informada, ou <code>null</code> caso n√£o exista.
 	 */
 	T find(Object pk);
 	
 	/**
 	 * Consulta todas as entidades.
-	 * @return Todas as entidades, ou uma lista vazia caso n„o exista.
+	 * @return Todas as entidades, ou uma lista vazia caso n√£o exista.
 	 */
 	List<T> findAll();
 }
