@@ -64,5 +64,5 @@
 		<Button text="Aplicar leiaute" onAction="#btnApplyLayout" />
 	</FlowPane>
 
-	<TableView fx:id="tblFile" editable="true" VBox.vgrow="ALWAYS"/>
+	<TableView fx:id="tblFile" editable="true" VBox.vgrow="ALWAYS" tableMenuButtonVisible="true"/>
 </VBox>
