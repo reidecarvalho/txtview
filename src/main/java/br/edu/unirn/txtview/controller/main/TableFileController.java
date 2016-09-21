@@ -70,7 +70,7 @@ public class TableFileController {
 	}
 	
 	private TableColumn<Map, String> createColumn(Field field) {
-		String text = String.format("%s\n(%d-%d)", field.getName(), field.getRange().getStart(), field.getRange().getEnd()); 
+		String text = String.format("%s\n%d-%d", field.getName(), field.getRange().getStart(), field.getRange().getEnd()); 
 		
 		TableColumn<Map, String> column = new TableColumn<>(text);
 		column.getStyleClass().add("columnsTblFile");
