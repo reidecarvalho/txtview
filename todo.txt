@@ -1,0 +1,4 @@
+- desprezar linhas comentadas
+- add versão
+- linha colocar numérico para ordenação
+- add splash manifest
