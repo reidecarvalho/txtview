@@ -1,5 +1,7 @@
 package br.edu.unirn.txtview;
 
+import java.awt.SplashScreen;
+
 import com.google.inject.persist.PersistService;
 
 import br.edu.unirn.txtview.di.AppFXMLLoader;
@@ -35,6 +37,10 @@ public class Main extends Application {
 			primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			if (SplashScreen.getSplashScreen() != null) {
+				SplashScreen.getSplashScreen().close();				
+			}
 		}
 	}
 	
