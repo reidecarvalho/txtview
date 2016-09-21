@@ -15,6 +15,7 @@ hs_err_pid*
 bin/
 tmp/
 target/
+*.log
 *.tmp
 *.bak
 *.swp

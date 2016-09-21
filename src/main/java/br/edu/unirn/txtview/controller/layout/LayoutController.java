@@ -26,10 +26,12 @@ public class LayoutController extends AbstractController {
 	@FXML private TextField txtName;
 	@Inject private LayoutService layoutService;
 	
-	private Layout layout = new Layout();
+	private Layout layout;
 
 	@FXML
 	private void initialize() {
+		layout = new Layout();
+		
 		tblField.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 		tblField.getItems().addListener((Change<? extends FieldDTO> change) -> {
 			computeRanges();
