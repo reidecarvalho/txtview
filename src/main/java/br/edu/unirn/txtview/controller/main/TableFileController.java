@@ -99,8 +99,8 @@ public class TableFileController {
 	}
 
 	private void addLine(Layout layout, int i, String line) throws InvalidLineSizeException {
-		Map<String, String> lineMap = lineToMapConverter.toMap(line, layout);
-		lineMap.put(LINE_COLUMN_NAME, "" + i);
+		Map<String, Object> lineMap = lineToMapConverter.toMap(line, layout);
+		lineMap.put(LINE_COLUMN_NAME, i);
 		tblFile.getItems().add(lineMap);
 	}
 	

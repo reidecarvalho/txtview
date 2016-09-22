@@ -22,12 +22,12 @@ public class LineToMapConverter {
 	 * @return Um mapa de campos do leiaute, com os valores correspondentes na linha.
 	 * @throws InvalidLineSizeException se o tamanho da linha for diferente do tamanho dos campos no leiaute.
 	 */
-	public Map<String, String> toMap(String line, Layout layout) throws InvalidLineSizeException {
+	public Map<String, Object> toMap(String line, Layout layout) throws InvalidLineSizeException {
 		if (line.length() != layout.getFieldsSize()) {
 			throw new InvalidLineSizeException(line.length(), layout.getFieldsSize());
 		}
 		
-		Map<String, String> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<>();
 		layout.getFields().forEach(f -> map.put(f.getName(), extractValue(line, f)));
 		return map;
 	}
