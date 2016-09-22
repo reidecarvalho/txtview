@@ -1,3 +1,2 @@
 - add versão
-- linha colocar numérico para ordenação
 - add splash manifest
