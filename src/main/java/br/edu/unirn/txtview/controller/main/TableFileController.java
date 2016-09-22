@@ -85,7 +85,9 @@ public class TableFileController {
 		for (int i = 1; i <= lines.size(); i++) {
 			try {
 				String line = lines.get(i - 1);
-				addLine(layout, i, line);
+				if (!line.startsWith("#")) {
+					addLine(layout, i, line);
+				}
 			}
 			catch (InvalidLineSizeException e) {
 				boolean proceed = handleApplyLayoutError(e, i, layout);
