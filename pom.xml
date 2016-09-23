@@ -72,6 +72,8 @@
 	</dependencies>
 
 	<build>
+		<finalName>${project.artifactId}</finalName>
+
 		<plugins>
 
 			<!-- Configura o compilador JDK -->
@@ -84,7 +86,7 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
-			
+
 			<!-- Prepara as dependências para o executável -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -122,6 +124,25 @@
 						</manifestEntries>
 					</archive>
 				</configuration>
+			</plugin>
+
+			<!-- Empacota para distribuição -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<descriptor>src/assembly/bin.xml</descriptor>
+					<finalName>${project.artifactId}-${pom.version}</finalName>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 		</plugins>
