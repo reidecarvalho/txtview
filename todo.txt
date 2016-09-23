@@ -1,2 +1,1 @@
 - add versão
-- add splash manifest
