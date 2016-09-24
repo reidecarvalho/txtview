@@ -10,6 +10,6 @@ import br.edu.unirn.txtview.model.Layout;
  */
 public class InvalidLineSizeException extends Exception {
 	public InvalidLineSizeException(int lineSize, int expected) {
-		super("tamanho de linha inv�lido; foi " + lineSize + ", esperava " + expected);
+		super("tamanho de linha inválido; foi " + lineSize + ", esperava " + expected);
 	}
 }
