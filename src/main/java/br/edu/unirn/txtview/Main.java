@@ -6,6 +6,7 @@ import com.google.inject.persist.PersistService;
 
 import br.edu.unirn.txtview.di.AppFXMLLoader;
 import br.edu.unirn.txtview.di.AppInjector;
+import br.edu.unirn.txtview.tools.AppInfo;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -32,7 +33,7 @@ public class Main extends Application {
 			Scene scene = new Scene(AppFXMLLoader.load("Main.fxml"));
 			primaryStage.setScene(scene);
 			primaryStage.setMaximized(true);
-			primaryStage.setTitle("Txt View");
+			primaryStage.setTitle("TXT View - v" + AppInjector.getInstance(AppInfo.class).getVersion());
 			primaryStage.getIcons().add(new Image("/images/app.png"));
 			primaryStage.show();
 		} catch (Exception e) {

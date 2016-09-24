@@ -117,6 +117,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
+							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 							<mainClass>br.edu.unirn.txtview.Main</mainClass>
 						</manifest>
 						<manifestEntries>
