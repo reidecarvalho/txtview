@@ -21,11 +21,11 @@
 			<version>5.2.1.Final</version>
 		</dependency>
 
-		<!-- Driver JDBC para o banco de dados PostgreSQL -->
+		<!-- Driver JDBC para o banco de dados HSQLDB -->
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>9.4.1209.jre7</version>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.3.4</version>
 		</dependency>
 
 		<!-- Google Guice como framework de Injeção de Dependência -->
