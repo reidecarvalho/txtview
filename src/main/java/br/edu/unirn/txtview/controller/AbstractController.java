@@ -3,14 +3,13 @@ package br.edu.unirn.txtview.controller;
 import java.io.File;
 import java.io.IOException;
 
-import br.edu.unirn.txtview.di.AppFXMLLoader;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import br.edu.unirn.txtview.di.AppFXMLLoader;
 
 /**
  * Implementação base para Controllers FXML, fornecendo serviços auxiliares.
@@ -28,7 +27,7 @@ public abstract class AbstractController implements ParamController {
 	 * @throws IOException se o arquivo fxml não puder ser carregado.
 	 */
 	protected <C> void showView(String title, String fxml, Object... params) throws IOException {
-		Stage stage = new Stage(StageStyle.UTILITY);
+		Stage stage = new Stage();
 		stage.setResizable(false);
 		stage.initModality(Modality.APPLICATION_MODAL);
 		stage.initOwner(getStage()); // evita criar duas janelas na barra de tarefas
