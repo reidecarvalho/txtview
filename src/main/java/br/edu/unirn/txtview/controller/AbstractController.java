@@ -1,7 +1,6 @@
 package br.edu.unirn.txtview.controller;
 
 import java.io.File;
-import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -24,9 +23,8 @@ public abstract class AbstractController implements ParamController {
 	 * @param title título da tela.
 	 * @param fxml nome do aquivo fxml.
 	 * @param params lista de parâmetros a serem passados para o controller.
-	 * @throws IOException se o arquivo fxml não puder ser carregado.
 	 */
-	protected <C> void showView(String title, String fxml, Object... params) throws IOException {
+	protected <C> void showView(String title, String fxml, Object... params) {
 		Stage stage = new Stage();
 		stage.setResizable(false);
 		stage.initModality(Modality.APPLICATION_MODAL);

@@ -2,6 +2,14 @@ package br.edu.unirn.txtview.controller.layout;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+import javafx.collections.ListChangeListener.Change;
+import javafx.fxml.FXML;
+import javafx.scene.control.SelectionMode;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellEditEvent;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
 import javax.inject.Inject;
 
 import br.edu.unirn.txtview.controller.AbstractController;
@@ -12,13 +20,6 @@ import br.edu.unirn.txtview.model.Range;
 import br.edu.unirn.txtview.service.LayoutService;
 import br.edu.unirn.txtview.service.core.DadoInvalidoException;
 import br.edu.unirn.txtview.view.Alerts;
-import javafx.collections.ListChangeListener.Change;
-import javafx.fxml.FXML;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableColumn.CellEditEvent;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 
 public class LayoutController extends AbstractController {
 	@FXML private TableView<FieldDTO> tblField;

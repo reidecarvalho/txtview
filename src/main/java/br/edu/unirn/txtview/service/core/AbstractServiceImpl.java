@@ -5,9 +5,9 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.transaction.Transaction;
 
-import com.google.inject.persist.Transactional;
-
 import br.edu.unirn.txtview.dao.DAO;
+
+import com.google.inject.persist.Transactional;
 
 /**
  * Fornece implementação padrão dos serviços referentes à interface {@link Service}.<br/>

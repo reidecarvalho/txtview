@@ -1,10 +1,10 @@
 package br.edu.unirn.txtview.di;
 
+import br.edu.unirn.txtview.di.guice.AppModule;
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.persist.jpa.JpaPersistModule;
-
-import br.edu.unirn.txtview.di.guice.AppModule;
 
 /**
  * Classe para obter uma instância de uma classe de forma manual, quando necessário.

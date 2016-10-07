@@ -8,6 +8,11 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.MapValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
+
 import javax.inject.Inject;
 
 import org.apache.commons.lang3.StringUtils;
@@ -16,10 +21,6 @@ import br.edu.unirn.txtview.exception.InvalidLineSizeException;
 import br.edu.unirn.txtview.model.Field;
 import br.edu.unirn.txtview.model.Layout;
 import br.edu.unirn.txtview.view.Alerts;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.MapValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
 
 /**
  * Controller auxiliar para gerenciar a tabela de arquivo.

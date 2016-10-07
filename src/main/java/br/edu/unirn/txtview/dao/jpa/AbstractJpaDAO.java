@@ -5,8 +5,8 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import br.edu.unirn.txtview.dao.DAO;
 import net.jodah.typetools.TypeResolver;
+import br.edu.unirn.txtview.dao.DAO;
 
 /**
  * Fornece implementação padrão em JPA para a interface {@link DAO}.<br/>

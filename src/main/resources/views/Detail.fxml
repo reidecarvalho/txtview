@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.Tooltip?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root" fx:controller="br.edu.unirn.txtview.controller.detail.DetailController"
+	spacing="5">
+	
+	<stylesheets>
+		<String fx:value="css/Base.css" />
+	</stylesheets>
+	
+	<padding>
+		<Insets top="5" right="5" bottom="5" left="5" />
+	</padding>
+
+	<TableView fx:id="tblLine" editable="true" VBox.vgrow="ALWAYS" prefWidth="600"/>
+</VBox>

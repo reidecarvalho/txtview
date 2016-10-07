@@ -1,15 +1,15 @@
 package br.edu.unirn.txtview.di.guice;
 
-import com.google.inject.AbstractModule;
-import com.google.inject.TypeLiteral;
-import com.google.inject.matcher.Matchers;
-
 import br.edu.unirn.txtview.dao.DAO;
 import br.edu.unirn.txtview.dao.jpa.LayoutJpaDAO;
 import br.edu.unirn.txtview.model.Layout;
 import br.edu.unirn.txtview.service.LayoutService;
 import br.edu.unirn.txtview.service.core.Service;
 import br.edu.unirn.txtview.service.impl.LayoutServiceImpl;
+
+import com.google.inject.AbstractModule;
+import com.google.inject.TypeLiteral;
+import com.google.inject.matcher.Matchers;
 
 /**
  * Módulo para configuração no Guice das injeções de dependência.

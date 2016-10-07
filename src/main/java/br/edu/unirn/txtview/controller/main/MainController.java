@@ -4,6 +4,16 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
+import javafx.beans.binding.Bindings;
+import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.TableRow;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
+
 import javax.inject.Inject;
 
 import br.edu.unirn.txtview.controller.AbstractController;
@@ -11,11 +21,6 @@ import br.edu.unirn.txtview.model.Layout;
 import br.edu.unirn.txtview.service.LayoutService;
 import br.edu.unirn.txtview.service.core.ExcluirException;
 import br.edu.unirn.txtview.view.Alerts;
-import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Tooltip;
 
 public class MainController extends AbstractController {
 	@FXML	private ComboBox<Layout> cmbLayout;
@@ -27,13 +32,28 @@ public class MainController extends AbstractController {
 
 	@FXML
 	private void initialize() {
-		tableFileController.setTblFile(tblFile);
 		loadCmbLayout();
+		tableFileController.setTblFile(tblFile);
+		configTableContextMenu();
 	}
 
 	private void loadCmbLayout() {
 		cmbLayout.getItems().clear();
 		layoutService.findAll().forEach(l -> cmbLayout.getItems().add(l));
+	}
+	
+	private void configTableContextMenu() {
+		tblFile.setRowFactory(table -> {
+			MenuItem detailItem = new MenuItem("Mostrar detalhes");
+			detailItem.setOnAction(event -> showView("Detalhes da Linha", "Detail.fxml", tblFile.getSelectionModel().getSelectedItem()));
+			
+			TableRow<Map> row = new TableRow<>();
+			row.contextMenuProperty().bind(
+						Bindings.when(row.emptyProperty())
+						.then((ContextMenu) null)
+						.otherwise(new ContextMenu(detailItem)));
+			return row;
+		});
 	}
 
 	@FXML
@@ -67,13 +87,13 @@ public class MainController extends AbstractController {
 	}
 
 	@FXML
-	private void btnAddLayout() throws IOException {
+	private void btnAddLayout() {
 		showView("Manter Leiautes", "Layout.fxml");
 		loadCmbLayout();
 	}
 
 	@FXML
-	private void btnEditLayout() throws IOException {
+	private void btnEditLayout() {
 		Layout layout = cmbLayout.getValue();
 		if (layout != null) {
 			showView("Manter Leiautes", "Layout.fxml", layout);
@@ -84,7 +104,7 @@ public class MainController extends AbstractController {
 	}
 	
 	@FXML
-	private void btnDelLayout() throws IOException, ExcluirException {
+	private void btnDelLayout() throws ExcluirException {
 		Layout layout = cmbLayout.getValue();
 		if (layout != null) {
 			String msg = "Confirma exclusão do Leiaute '" + layout.getName() + "'?";

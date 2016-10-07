@@ -1,11 +1,11 @@
 package br.edu.unirn.txtview.dto;
 
-import br.edu.unirn.txtview.model.Field;
-import br.edu.unirn.txtview.model.Layout;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import br.edu.unirn.txtview.model.Field;
+import br.edu.unirn.txtview.model.Layout;
 
 /**
  * DTO para a tabela de campos do {@link Layout}.

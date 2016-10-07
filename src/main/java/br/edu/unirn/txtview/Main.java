@@ -2,15 +2,15 @@ package br.edu.unirn.txtview;
 
 import java.awt.SplashScreen;
 
-import com.google.inject.persist.PersistService;
-
-import br.edu.unirn.txtview.di.AppFXMLLoader;
-import br.edu.unirn.txtview.di.AppInjector;
-import br.edu.unirn.txtview.tools.AppInfo;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import br.edu.unirn.txtview.di.AppFXMLLoader;
+import br.edu.unirn.txtview.di.AppInjector;
+import br.edu.unirn.txtview.tools.AppInfo;
+
+import com.google.inject.persist.PersistService;
 
 /**
  * Ponto de início da aplicação.

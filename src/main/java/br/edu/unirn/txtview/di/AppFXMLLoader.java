@@ -3,9 +3,9 @@ package br.edu.unirn.txtview.di;
 import java.io.IOException;
 import java.io.InputStream;
 
-import br.edu.unirn.txtview.controller.ParamController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import br.edu.unirn.txtview.controller.ParamController;
 
 /**
  * Loader para os arquivos fxml.
