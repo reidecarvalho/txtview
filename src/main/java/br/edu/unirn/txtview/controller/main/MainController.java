@@ -5,10 +5,12 @@ import java.io.IOException;
 import java.util.Map;
 
 import javafx.beans.binding.Bindings;
+import javafx.beans.binding.IntegerBinding;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -33,8 +35,7 @@ public class MainController extends AbstractController {
 	@FXML
 	private void initialize() {
 		loadCmbLayout();
-		tableFileController.setTblFile(tblFile);
-		configTableContextMenu();
+		configTableFile();
 	}
 
 	private void loadCmbLayout() {
@@ -42,16 +43,37 @@ public class MainController extends AbstractController {
 		layoutService.findAll().forEach(l -> cmbLayout.getItems().add(l));
 	}
 	
+	private void configTableFile() {
+		tableFileController.setTblFile(tblFile);
+		configTableContextMenu();
+		tblFile.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+	}
+	
 	private void configTableContextMenu() {
 		tblFile.setRowFactory(table -> {
 			MenuItem detailItem = new MenuItem("Mostrar detalhes");
 			detailItem.setOnAction(event -> showView("Detalhes da Linha", "Detail.fxml", tblFile.getSelectionModel().getSelectedItem()));
 			
+			MenuItem comparingItem = new MenuItem("Comparar as 2 linhas");
+			comparingItem.setOnAction(event -> Alerts.info("Viva!"));
+			
+			// somente habilita o item quando houver exatamente 2 linhas selecionadas.
+			comparingItem.disableProperty().bind(Bindings.notEqual(2, new IntegerBinding() {
+				{
+					super.bind(comparingItem.disableProperty());
+				}
+				
+				@Override
+				protected int computeValue() {
+					return tblFile.getSelectionModel().getSelectedItems().size();
+				}
+			}));
+			
 			TableRow<Map> row = new TableRow<>();
 			row.contextMenuProperty().bind(
 						Bindings.when(row.emptyProperty())
 						.then((ContextMenu) null)
-						.otherwise(new ContextMenu(detailItem)));
+						.otherwise(new ContextMenu(detailItem, comparingItem)));
 			return row;
 		});
 	}
