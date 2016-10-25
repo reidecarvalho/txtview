@@ -55,7 +55,9 @@ public class MainController extends AbstractController {
 			detailItem.setOnAction(event -> showView("Detalhes da Linha", "Detail.fxml", tblFile.getSelectionModel().getSelectedItem()));
 			
 			MenuItem comparingItem = new MenuItem("Comparar as 2 linhas");
-			comparingItem.setOnAction(event -> Alerts.info("Viva!"));
+			comparingItem.setOnAction(event -> showView("Comparação", "Comparing.fxml", 
+					tblFile.getSelectionModel().getSelectedItems().get(0),
+					tblFile.getSelectionModel().getSelectedItems().get(1)));
 			
 			// somente habilita o item quando houver exatamente 2 linhas selecionadas.
 			comparingItem.disableProperty().bind(Bindings.notEqual(2, new IntegerBinding() {

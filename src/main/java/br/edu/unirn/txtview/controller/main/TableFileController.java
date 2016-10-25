@@ -28,7 +28,7 @@ import br.edu.unirn.txtview.view.Alerts;
  *
  */
 public class TableFileController {
-	private static final String LINE_COLUMN_NAME = "LINHA";
+	public static final String LINE_COLUMN_NAME = "LINHA";
 	private static final char ERROR_FILL = '-';
 	
 	private TableView<Map> tblFile;
