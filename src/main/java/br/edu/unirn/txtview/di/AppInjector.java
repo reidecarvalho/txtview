@@ -7,7 +7,7 @@ import com.google.inject.Injector;
 import com.google.inject.persist.jpa.JpaPersistModule;
 
 /**
- * Classe para obter uma instância de uma classe de forma manual, quando necessário.
+ * Helper para obter uma instância de uma classe de forma manual, quando necessário.
  * @author Reinaldo
  *
  */
